@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root{
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lightgrey: hsl(217, 12%, 63%);
+    --mediumgrey: hsl(216, 12%, 54%);
+    --darkblue: hsl(213, 19%, 18%);
+    --verydarkblue: hsl(216, 12%, 8%);
+    --lightdarkblue: hsl(218, 18%, 24%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    background-color: var(--verydarkblue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem;
+    min-height: 100vh;
+}
+
+ul {
+list-style-type: none;
+}
+
+button{
+    font-family: inherit;
+}
+
+.ratings-container, .thanks-container{
+    max-width: 410px;
+    background-color: var(--darkblue);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+}
+
+p {
+    line-height: 1.8;
+    color: var(--lightgrey);
+    font-size: 15px;
+}
+
+/* ratings-container */
+
+.hero-img {
+    background-color: var(--lightdarkblue);
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.header{
+    color: var(--white);
+    margin: 2rem 0 1rem;
+}
+
+.description {
+    margin-bottom: 1.5rem;
+}
+
+.ratings-btn {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ratings-btn .btn {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--lightdarkblue);
+    border: none;
+    border-radius: 50%;
+    padding-top: 0.2rem;
+    color: var(--mediumgrey);
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ratings-btn .btn:hover{
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.ratings-btn .btn:focus{
+    background-color: var(--mediumgrey);
+    color: var(--white);
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 1.8rem;
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 0.8rem 0 0.6rem;
+    border: none;
+    border-radius: 1.8rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    color: var(--orange);
+    background-color: var(--white);
+}
+
+/* thank-you container */
+
+.thanks-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.thanks-img{
+   display: block;
+   margin: 0 auto 2rem;
+}
+
+.thanks-header {
+    background-color: var(--lightdarkblue);
+    color: var(--orange);
+    border-radius: 1.5rem;
+    padding: 0.2rem 0.5rem 0;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.greetings {
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.thanks-msg {
+    text-align: center;
+    word-spacing: 2.2px;
+    margin-bottom: 2rem;
+}
+
+/* hidden */
+
+.hidden {
+    display: none;
+}
