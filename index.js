@@ -3,10 +3,12 @@ const thanks = document.querySelector(".thanks-container");
 const rating = document.getElementById("rating");
 const rates = document.querySelectorAll(".btn");
 const submitBtn = document.getElementById("submitBtn");
-const thanksMessage = document.getElementById("thanks-message");
+const thanksMessage = document.querySelectorAll(".thanks-msg");
+const ratingsMessage = document.getElementById("ratings-message");
+const noRatingsMessage = document.getElementById("noratings-message");
 
 submitBtn.addEventListener("click", () => {
-    thanks.classList.remove('hidden');
+    thanks.classList.remove("hidden");
     ratings.style.display = "none";
 })
 
@@ -15,9 +17,11 @@ submitBtn.addEventListener("click", () => {
 rates.forEach((rate) => {
     rate.addEventListener("click", () => {
         rating.innerHTML = rate.innerHTML;
+        ratingsMessage.classList.remove("hidden");
+        noRatingsMessage.classList.add("hidden");
     })
     if (rating.innerHTML < 1) {
         rating.innerHTML = 0;
-        thanksMessage.innerHTML = "You did'nt gave us any ratings."
+        noRatingsMessage.classList.remove("hidden");
     }
 })
